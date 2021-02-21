@@ -1,12 +1,26 @@
 import React, { Component } from 'react'
-import Header from '../components/Header'
-import Card from '../components/Card'
+import '../assets/Card.css'
 
 class Home extends Component {
   render() {
     return (
-      <Header/>,
-      <Card/>
+      <div class="card">
+      <img src="img/13.png" alt=""/>
+      <div class="card-body">
+        <p class="card-title">Handphone Mahal</p>
+        <p class="card-price">Rp. 500.000</p>
+        <div class="location">
+          <p>Jakarta</p>
+        </div>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+    </div>
     )
   }
 }

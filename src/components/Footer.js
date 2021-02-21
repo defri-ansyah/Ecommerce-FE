@@ -14,7 +14,7 @@ class Footer extends Component {
             <li>Tokopedia Saham</li>
             <li>Hotel</li>
             <li>Bridestory</li>
-            <li>ParentStory</li>
+            {/* <li>ParentStory</li>
             <li>Kamus Tokopedia</li>
             <li>Official Store</li>
             <li>Aplikasi Tokopedia</li>
@@ -23,7 +23,7 @@ class Footer extends Component {
             <li>Tukar Tambah Handphone</li>
             <li>Paket Umroh</li>
             <li>Alquran Online</li>
-            <li>Kotak Kejutan</li>
+            <li>Kotak Kejutan</li> */}
           </ul>
           <div className='parent-footer two'>
             <li className='title'>Beli</li>
