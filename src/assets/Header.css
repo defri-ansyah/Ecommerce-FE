@@ -129,3 +129,31 @@
   border: 1px solid #03ac0e;
   color: #03ac0e;
 }
+
+.modal {
+  z-index: 9999;
+}
+
+.modal-content {
+  top: 56px;
+  right: 175px;
+  padding: 19px;
+  width: 168%;
+  /* border-radius: 0; */
+  border: none;
+}
+
+.m-c-head .btn {
+  color: #03ac0e;
+  border: 1px solid #03ac0e;
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+.m-c-head span {
+  color: #818181;
+}
+
+.m-c-head .title {
+  color: #7b7b7b;
+}
