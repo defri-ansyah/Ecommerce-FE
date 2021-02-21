@@ -8,7 +8,7 @@ function App() {
     <div>
     <Route path="/" exact component={Home}/>
     <div className="App">
-      <h1>Hello</h1>
+      <h1>Hello, Letia Oktridiana</h1>
     </div>
     </div>
     </BrowserRouter>
