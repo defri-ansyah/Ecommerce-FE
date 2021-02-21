@@ -1,4 +1,4 @@
-.link{
+/* .link{
     color: inherit;
     text-decoration: none;
 }
@@ -36,4 +36,13 @@ font-size: 12px;
 .rating{
 color: rgb(250, 191, 29);
 font-size: 12px;
+} */
+
+.card {
+  box-shadow: rgba(49, 53, 59, 0.12);
+  border-radius: 12px;
+}
+
+.card-body {
+  padding: 12px;
 }
