@@ -28,9 +28,21 @@ class Header extends Component {
               <div className='wrap-icon-search'>
                 <img className='img-search' src="img/3.png" alt=""/>
               </div>
+            
+            </div>
+            <div className='wrap-img-shop mx-3'>
+              <img className='img-shop' src="img/4.png" alt=""/>
+            </div>
+
+            <span className='me-3 line'>|</span>
+
+            <div className='d-flex'>
+              <button className='btn font-weight-bold me-3'>Masuk</button>
+              <button className='btn font-weight-bold text-white'>Daftar</button>
             </div>
           </div>
         </div>
+
       </div>
     )
   }
