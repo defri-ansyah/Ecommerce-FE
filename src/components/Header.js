@@ -42,6 +42,14 @@ class Header extends Component {
               <button className='btn font-weight-bold text-white'>Daftar</button>
             </div>
           </div>
+          <div className='text-under-search d-flex mt-2'>
+            <span className='me-3'>Realme C3</span>
+            <span className='me-3'>Helm Ink</span>
+            <span className='me-3'>Realme 6</span>
+            <span className='me-3'>Mouse Gaming</span>
+            <span className='me-3'>Celana Pendek</span>
+            <span className='me-3'>Iphone 12 Pro Max</span>
+          </div>
         </div>
       </div>
       {/* Modal */}
@@ -63,7 +71,7 @@ class Header extends Component {
           </div>
         </div>
       </div>
-    </div>
+      </div>
     </div>
     )
   }

@@ -5,7 +5,7 @@ class Footer extends Component {
   render() {
     return (
       <div className='footer'>
-        <div className='container footer-link'>
+        <div className='container d-flex justify-content-start align-items-start'>
           <ul className='parent-footer one'>
             <li className='title'>Tokopedia</li>
             <li>Tentang Tokopedia</li>
@@ -14,16 +14,6 @@ class Footer extends Component {
             <li>Tokopedia Saham</li>
             <li>Hotel</li>
             <li>Bridestory</li>
-            {/* <li>ParentStory</li>
-            <li>Kamus Tokopedia</li>
-            <li>Official Store</li>
-            <li>Aplikasi Tokopedia</li>
-            <li>Keuangan</li>
-            <li>Bebas Ongkir</li>
-            <li>Tukar Tambah Handphone</li>
-            <li>Paket Umroh</li>
-            <li>Alquran Online</li>
-            <li>Kotak Kejutan</li> */}
           </ul>
           <div className='parent-footer two'>
             <li className='title'>Beli</li>
@@ -44,8 +34,17 @@ class Footer extends Component {
             <li>Syarat dan Ketentuan</li>
             <li>Kebijakan Privasi</li>
           </div>
-          <div className='four'>
-            <img src="https://ecs7.tokopedia.net/assets-unify/img/il-footer-2.jpg" alt=""/>
+          <div className='four d-flex flex-column align-items-center'>
+            <img width='500px' src="img/21.png" alt=""/>
+            <div className='d-flex mt-3'>
+              <img className='me-3' width='150px' src="img/22.png" alt=""/>
+              <img width='150px' src="img/23.png" alt=""/>
+            </div>
+            <span className='mt-3' style={{color: '#989898'}}>© 2009 - 2021, PT. Tokopedia.</span>
+            <div className='d-flex align-items-center mt-3 p-1 rounded' style={{backgroundColor:'#f4f4f4'}}>
+              <span className='text-white fw-bold p-1 me-2 rounded' style={{backgroundColor: '#03ac0e', fontWeight: 'bold'}}>Indonesia</span>
+              <span className='pe-2' style={{color: '#989898', fontWeight: 'bold'}}>English</span>
+            </div>
           </div>
         </div>
       </div>

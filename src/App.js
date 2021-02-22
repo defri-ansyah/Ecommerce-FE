@@ -8,9 +8,9 @@ import Footer from './components/Footer'
 function App() {
   return (
     <BrowserRouter>
-    <Header/>
-    <Route path="/" exact component={Home}/>
-    <Footer/>
+      <Header/>
+      <Route path="/" exact component={Home}/>
+      <Footer/>
     </BrowserRouter>
   );
 }

@@ -1,5 +1,7 @@
 .header {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
   z-index: 9999;
 }
 
@@ -130,6 +132,15 @@
   color: #03ac0e;
 }
 
+.text-under-search {
+  margin-left: 17%;
+}
+
+.text-under-search span:hover {
+  color: #03ac0e;
+  cursor: pointer;
+}
+
 .modal {
   z-index: 9999;
 }
@@ -156,4 +167,8 @@
 
 .m-c-head .title {
   color: #7b7b7b;
+}
+
+.sticky-top {
+  position: sticky;
 }
