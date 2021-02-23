@@ -5,10 +5,26 @@ class Home extends Component {
   render() {
     return (
     <div className='row mx-4 mt-5 mb-5'>
-      <hr style={{marginTop: '100px'}}/>
+      <div className='d-flex wrap'>
+        <div className='ps-3 pe-3 pb-2 product'>
+          {/* <img src="img/search-product.svg" alt=""/> */}
+          <img src="img/search-product-active.svg" alt=""/>
+          <span style={{color: '#03ac0e'}}>Produk</span>
+        </div>
+        <div className='ps-3 pe-3'>
+          <img src="img/search-store.svg" alt=""/>
+          <span>Toko</span>
+        </div>
+        <div className='ps-3'>
+          <img src="img/search-profile.svg" alt=""/>
+          <span>Profil</span>
+        </div>
+      </div>
+
+      <hr/>
       <div className='d-flex justify-content-between align-items-center mb-3 mt-2'>
         <span>Menampilkan 20.987 product untuk "rompi" (1-12 dari 20.987)</span>
-        <span style={{marginLeft: '52%'}}>Urutkan: </span>
+        <span style={{marginLeft: '58%', fontWeight: 'bold'}}>Urutkan: </span>
         <select className='form-select' aria-label='Default select Example'>
           <option value="1">Paling Sesuai</option>
           <option value="2">Ulasan</option>
@@ -17,6 +33,7 @@ class Home extends Component {
           <option value="5">Harga Terendah</option>
         </select>
       </div>
+
       <div className='col-2 mb-3'>
         <div className='card'>
           <img src="img/12.jpg" className='card-img-top' alt="..."/>
