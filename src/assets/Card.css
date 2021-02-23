@@ -1,6 +1,7 @@
 .card {
   box-shadow: rgba(49, 53, 59, 0.12);
   border-radius: 12px;
+  overflow: hidden;
 }
 
 .card-body {
