@@ -91,7 +91,7 @@ class ProductDetail extends Component {
                   <p>Rp. 889.000</p>
                 </div> */}
                 <div class="price">
-                  <p style={{ color: 'orangered', fontSize: '40px' }}>Rp 50.350</p>
+                  <p style={{ color: 'orangered', fontSize: '30px', fontWeight:'bold'}}>Rp 50.350</p>
                 </div>
                 <div class="price-guarantee">
                   <img src="img/rp-icon.svg" alt="" />

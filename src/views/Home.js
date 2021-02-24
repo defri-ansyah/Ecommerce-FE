@@ -41,7 +41,7 @@ class Home extends Component {
             <h6 className='card-title'>Pakaian Anak Lucu</h6>
             <div className='d-flex'>
               <span className='badge badge-pill' style={{backgroundColor: '#ff00d13b', color: '#d50000'}}>47%</span>
-              <span className='badge-pill badge'style={{color: '#989898'}}><del>Rp 95.000</del></span>
+              <span className='badge-pill badge'style={{color: '#989898'}}>Jakarta Selatan</span>
             </div>
             <h6 className='mt-1'>Rp 50.350</h6>
             <div className='align-items-center'>
