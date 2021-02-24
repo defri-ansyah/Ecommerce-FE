@@ -5,17 +5,21 @@ import ProductDetail from './views/ProductDetail'
 import Cart from './views/Cart'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import { Provider } from 'react-redux'
+import store from './configs/redux/store.js'
 
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header/>
-      <Route path="/" exact component={Home}/>
-      <Route path="/product-detail" exact component={ProductDetail}/>
-      <Route path="/cart" exact component={Cart}/>
-      <Footer/>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Header />
+        <Route path="/" exact component={Home}/>
+        <Route path="/product-detail" exact component={ProductDetail}/>
+        <Route path="/cart" exact component={Cart}/>
+        <Footer />
+      </BrowserRouter>
+    </Provider>
   );
 }
 
