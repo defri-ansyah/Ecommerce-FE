@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../assets/Card.css'
+import '../assets/Home.css'
 
 class Home extends Component {
   render() {
