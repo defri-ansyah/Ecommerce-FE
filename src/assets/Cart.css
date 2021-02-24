@@ -1,0 +1,67 @@
+.wrap-cart {
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+.left-wrap {
+  margin-left: 100px;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.163);
+  /* margin-bottom: 20px; */
+  padding-bottom: 10px;
+}
+
+.head-cart{
+  border-bottom: 5px solid rgba(0, 0, 0, 0.163);
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.img-cart{
+  border-radius: 10px;
+  outline-color: rgba(49, 53, 59, 0.12);
+  width: 100px;
+}
+
+.wrap-beli {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.163);
+  border-radius: 12px;
+  margin-left: 50px;
+  height: max-content;
+  padding: 20px;
+  width: 30%;
+  margin-bottom: 30px;
+}
+
+.submit {
+  color: #f4f4f4;
+  font-weight: bold;
+}
+
+.catatan{
+  color: #03ac0e;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 25px;
+}
+
+.city{
+  color: #7b7b7b;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.del {
+  font-weight: bold;
+  color: #03ac0e;
+}
+
+.input-item {
+  outline: none;
+  font-size: 16px;
+  line-height: 22px;
+  width: 60px;
+  text-align: center;
+  border: none;
+  border-bottom: .8px solid rgba(0, 0, 0, 0.115);
+}
