@@ -1,8 +1,18 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import '../assets/ProductDetail.css'
+
+const mapStateToProps = state => {
+  return {
+    dataLocal: state.data.data
+  }
+}
 
 class ProductDetail extends Component {
   render() {
+    const product = this.props.dataLocal[0]
+    const colors = product.colors
+    console.log(colors);
     return (
       <div className='product-detail wrapper'>
         <div className='path'>
@@ -33,7 +43,7 @@ class ProductDetail extends Component {
           <div className='product-img'>
             <div className='product-img-wrapper'>
               <div className='img-primary'>
-                <img src="img/12.jpg" alt="" />
+                <img src={product.image} alt="" />
               </div>
               {/* <div class="img-part">
             <div class="img img-1">
@@ -50,14 +60,14 @@ class ProductDetail extends Component {
                 <img src="img/label-store-icon.svg" alt="" />
                 <span>Official Store</span>
               </div>
-              <h2 className='product-name'>Pakaian Anak lucu</h2>
+              <h2 className='product-name'>{product.product_name}</h2>
               <div class="product-score">
                 <div class="score">
-                  <span>4.0</span>
+                  <span>{product.star}</span>
                   <div class="stars">
                     <img src="img/star.png" alt="" />
                   </div>
-                  <span>(184)</span>
+                  <span>({product.total_review})</span>
                 </div>
                 <span class="dot">&#8226;</span>
                 <div class="sold">
@@ -91,7 +101,7 @@ class ProductDetail extends Component {
                   <p>Rp. 889.000</p>
                 </div> */}
                 <div class="price">
-                  <p style={{ color: 'orangered', fontSize: '30px', fontWeight:'bold'}}>Rp 50.350</p>
+                  <p style={{ color: 'orangered', fontSize: '30px', fontWeight:'bold'}}>Rp {product.price}</p>
                 </div>
                 <div class="price-guarantee">
                   <img src="img/rp-icon.svg" alt="" />
@@ -119,17 +129,14 @@ class ProductDetail extends Component {
               </div> */}
               <div class="right-description">
                 <p class="counter-label">Pilih variant</p>
-                <input type="checkbox" className='btn-check' name='options' id='option1' autoComplete='off' />
-                <label className='btn btn-outline-success' for='option1'>Hijau</label>
-
-                <input type="checkbox" className="btn-check" name="options" id="option2" autocomplete="off" />
-                <label className="btn btn-outline-secondary" for="option2">Abu-abu</label>
-
-                <input type="checkbox" className="btn-check" name="options" id="option3" autocomplete="off" />
-                <label className="btn btn-outline-primary" for="option3">Biru</label>
-
-                <input type="checkbox" className="btn-check" name="options" id="option4" autocomplete="off" />
-                <label className="btn btn-outline-dark" for="option4">Hitam</label>
+                <div className='d-flex flex-row'>
+                  {colors.map(color => (
+                    <div>
+                      <input type="checkbox" className='btn-check' name='options' id={color} autoComplete='off' />
+                      <label className='btn btn-outline-success' for={color}>{color}</label>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -139,14 +146,15 @@ class ProductDetail extends Component {
               </div>
               <div class="right-description">
                 <p class="counter-label">Pilih variant</p>
-                <input type="checkbox" className='btn-check' name='options' id='option5' autoComplete='off' />
-                <label className='btn btn-outline-secondary' for='option5'>M</label>
-
-                <input type="checkbox" className="btn-check" name="options" id="option6" autocomplete="off" />
-                <label className="btn btn-outline-secondary" for="option6">L</label>
-
-                <input type="checkbox" className="btn-check" name="options" id="option7" autocomplete="off" />
-                <label className="btn btn-outline-secondary" for="option7">XL</label>
+                
+                <div className='d-flex flex-row'>
+                {product.sizes.map(size => (
+                  <div>
+                  <input type="checkbox" className='btn-check' name='options' id={size} autoComplete='off' />
+                  <label className='btn btn-outline-secondary' for={size}>{size}</label>
+                  </div>
+                ))}
+                </div>
               </div>
             </div>
 
@@ -183,4 +191,6 @@ class ProductDetail extends Component {
   }
 }
 
-export default ProductDetail
+export default connect(
+  mapStateToProps
+)(ProductDetail)
