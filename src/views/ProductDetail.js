@@ -119,17 +119,17 @@ class ProductDetail extends Component {
               </div> */}
               <div class="right-description">
                 <p class="counter-label">Pilih variant</p>
-                <input type="radio" className='btn-check' name='options' id='option1' autoComplete='off' />
-                <label className='btn btn-success' for='option1'>Hijau</label>
+                <input type="checkbox" className='btn-check' name='options' id='option1' autoComplete='off' />
+                <label className='btn btn-outline-success' for='option1'>Hijau</label>
 
-                <input type="radio" className="btn-check" name="options" id="option2" autocomplete="off" />
-                <label className="btn btn-secondary" for="option2">Abu-abu</label>
+                <input type="checkbox" className="btn-check" name="options" id="option2" autocomplete="off" />
+                <label className="btn btn-outline-secondary" for="option2">Abu-abu</label>
 
-                <input type="radio" className="btn-check" name="options" id="option4" autocomplete="off" />
-                <label className="btn btn-primary" for="option4">Biru</label>
+                <input type="checkbox" className="btn-check" name="options" id="option3" autocomplete="off" />
+                <label className="btn btn-outline-primary" for="option3">Biru</label>
 
-                <input type="radio" className="btn-check" name="options" id="option5" autocomplete="off" />
-                <label className="btn btn-dark" for="option5">Hitam</label>
+                <input type="checkbox" className="btn-check" name="options" id="option4" autocomplete="off" />
+                <label className="btn btn-outline-dark" for="option4">Hitam</label>
               </div>
             </div>
 
@@ -139,14 +139,14 @@ class ProductDetail extends Component {
               </div>
               <div class="right-description">
                 <p class="counter-label">Pilih variant</p>
-                <input type="radio" className='btn-check' name='options' id='option1' autoComplete='off' />
-                <label className='btn btn-outline-secondary' for='option1'>M</label>
+                <input type="checkbox" className='btn-check' name='options' id='option5' autoComplete='off' />
+                <label className='btn btn-outline-secondary' for='option5'>M</label>
 
-                <input type="radio" className="btn-check" name="options" id="option2" autocomplete="off" />
-                <label className="btn btn-outline-secondary" for="option2">L</label>
+                <input type="checkbox" className="btn-check" name="options" id="option6" autocomplete="off" />
+                <label className="btn btn-outline-secondary" for="option6">L</label>
 
-                <input type="radio" className="btn-check" name="options" id="option4" autocomplete="off" />
-                <label className="btn btn-outline-secondary" for="option4">XL</label>
+                <input type="checkbox" className="btn-check" name="options" id="option7" autocomplete="off" />
+                <label className="btn btn-outline-secondary" for="option7">XL</label>
               </div>
             </div>
 
@@ -169,7 +169,7 @@ class ProductDetail extends Component {
                 <div className='d-flex justify-content-between itemModal'>
                   <div>
                   <img width='50px' className='rounded-3' src="img/12.jpg" alt=""/>
-                  <span className='ms-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, ullam!</span>
+                  <span className='ms-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
                   </div>
                 <button type="button" class="btn btn-success">Lihat Keranjang</button>
                 </div>
