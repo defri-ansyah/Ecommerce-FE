@@ -288,3 +288,17 @@
     border: none;
     color: white;
 }
+
+#modal {
+  z-index: 9999999;
+  top: 200px;
+  /* width: 1000px; */
+  /* left: 40%; */
+}
+
+.itemModal{
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.163);
+  padding: 10px;
+  border-radius: 15px;
+  align-items: center;
+}

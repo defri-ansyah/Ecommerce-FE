@@ -141,11 +141,11 @@
   cursor: pointer;
 }
 
-.modal {
+#exampleModal {
   z-index: 9999;
 }
 
-.modal-content {
+.m-c-head {
   top: 56px;
   right: 175px;
   padding: 19px;

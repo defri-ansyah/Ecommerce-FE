@@ -152,13 +152,32 @@ class ProductDetail extends Component {
 
           </div>
         </div>
-        {/* <div class="navbar-bottom"> */}
-          <div class="navbar-bottom-wrapper">
-            {/* <div class="checkout-info"> */}
-              <button class="btn btn-warning">Tambah Ke Keranjang</button>
-            {/* </div> */}
+
+        <div class="navbar-bottom-wrapper">
+          <button type='button' class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal">Tambah Ke Keranjang</button>
+        </div>
+
+        {/* Modal */}
+        <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title align-items-center" id="exampleModalLabel">Berhasil Ditambahkan</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div className='d-flex justify-content-between itemModal'>
+                  <div>
+                  <img width='50px' className='rounded-3' src="img/12.jpg" alt=""/>
+                  <span className='ms-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, ullam!</span>
+                  </div>
+                <button type="button" class="btn btn-success">Lihat Keranjang</button>
+                </div>
+              </div>
+            </div>
           </div>
-        {/* </div> */}
+        </div>
+
       </div>
     )
   }
