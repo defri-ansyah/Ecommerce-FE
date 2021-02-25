@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="https://github.com/defri-ansyah/Ecommerce-FE-Telkom-test">
+    <img src="./public/img/2.png"  width="200px" alt="Logo">
+  </a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">Ecommerse</h3>
 
-## Available Scripts
+  <p align="center">
+This project is Assignment Test for FE web 
+  <br/>
+    <a href="https://github.com/defri-ansyah/Ecommerce-FE-Telkom-test"><strong>Explore the docs »</strong></a>
+    <br /><br/>
+    <a href="https://github.com/defri-ansyah/Ecommerce-FE-Telkom-test">Report Bug</a>
+    ·
+    <a href="https://github.com/defri-ansyah/Ecommerce-FE-Telkom-test">Request Feature</a>
+  </p>
+<p align="center">
+<img src="https://img.shields.io/github/repo-size/defri-ansyah/Ecommerce-FE-Telkom-test?color=%20%236379f4&label=Repo%20SIZE&logo=%20%236379f4&logoColor=%20%236379f4&style=flat">
+ <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/React-v17.0.1-blue?style=flat"></a>
+ <a href="https://getbootstrap.com/docs/5/getting-started/introduction"><img src="https://img.shields.io/badge/Bootstrap-v5-lightgreen?style=flat"></a>
+</p>
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-### `npm start`
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Screenshots](#screenshots)
+* [Contact](#contact)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-### `npm test`
+This project is Assignment Test for FE web 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Built With
 
-### `npm run build`
+* [React.js](https://reactjs.org/)
+* [Redux](https://reactjs.org/)
+* [Bootstrap](https://getbootstrap.com//)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- GETTING STARTED -->
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+Before going to the installation stage there are some software that must be installed first.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* [NodeJs](https://nodejs.org/en/download/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+If you want to run this project locally
+1. Clone the repo
+```
+git clone https://github.com/defri-ansyah/Ecommerce-FE-Telkom-test.git
+```
+2. Install NPM packages
+```
+npm install
+```
+3. Run the project
+```
+  npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<!-- ROADMAP -->
+## Screenshots
 
-## Learn More
+<p align='center'>
+  <span>
+      <image width="500" src='./screenshots/Home.png' />
+      <image width="500" src='./screenshots/Product.png' />
+      <image width="500" src='./screenshots/Transisi.png' />
+      <image width="500" src='./screenshots/Cart.png' />
+     
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- CONTRIBUTING -->
+## Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-### Code Splitting
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+<!-- CONTACT -->
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Email - defriansyah013@gmail.com
+- LinkedIn - [Defri Ansyah](https://linkedin.com/in/defri-ansyah/)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+Copyright © 2021 [Defri Ansyah](https://github.com/defri-ansyah)
