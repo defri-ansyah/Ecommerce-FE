@@ -30,3 +30,17 @@
 .product {
   border-bottom: 3px solid #03ac0e;
 }
+
+.linkTo{
+  text-decoration: none;
+  color: #989898;
+}
+
+.linkTo:hover{
+  text-decoration: none;
+  color: #989898;
+}
+
+.imgCard {
+  height: 220px;
+}

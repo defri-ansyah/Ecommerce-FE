@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import '../assets/Home.css'
 
 const mapStateToProps = state => {
@@ -10,7 +11,6 @@ const mapStateToProps = state => {
 
 class Home extends Component {
   render() {
-    console.log(this.props.dataLocal);
     return (
       <div className='row mx-4 mt-5 mb-5'>
         <div className='d-flex wrap'>
@@ -43,15 +43,16 @@ class Home extends Component {
         </div>
         {this.props.dataLocal.map((product) => (
           <div className='col-2 mb-3'>
+            <Link to={`/product-detail/${product.id}`} className='linkTo'>
             <div className='card'>
-              <img src="img/12.jpg" className='card-img-top' alt="..." />
+              <img src={product.image} className='card-img-top imgCard' alt="..." />
               <div className='card-body'>
                 <h6 className='card-title'>{product.product_name}</h6>
-                <div className='d-flex'>
-                  <span className='badge badge-pill' style={{ backgroundColor: '#ff00d13b', color: '#d50000' }}>47%</span>
-                  <span className='badge-pill badge' style={{ color: '#989898' }}>{product.area}</span>
-                </div>
                 <h6 className='mt-1'>Rp {product.price}</h6>
+                <div className='d-flex align-items-center'>
+                  <img width='15px' height='15px' src="https://ecs7.tokopedia.net/img/blog/seller/2019/06/newpm-pm-icon%403x.png" alt=""/>
+                  <span className='badge-pill badge' style={{ color: '#989898' }}>{product.store.area}</span>
+                </div>
                 <div className='align-items-center'>
                   <img className='me-1' width='10px' height='10px' src="img/icon-bintang.png" alt="" />
                   <img className='me-1' width='10px' height='10px' src="img/icon-bintang.png" alt="" />
@@ -62,6 +63,7 @@ class Home extends Component {
                 </div>
               </div>
             </div>
+            </Link>
           </div>))}
       </div>
     )

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../assets/Header.css'
+import { Link } from 'react-router-dom'
 
 class Header extends Component {
   render() {
@@ -8,7 +9,7 @@ class Header extends Component {
       <div className='header'>
         <div className='item-header-1 d-flex justify-content-between align-items-center'>
           <div className='d-flex align-items-center'>
-            <img className='me-2' src= 'img/1.png' alt=""/>
+            <img className='me-2' src= '/img/1.png' alt=""/>
             <span>Download Tokopedia App</span>
           </div>
           <div className='d-flex'>
@@ -22,7 +23,9 @@ class Header extends Component {
 
         <div className='item-header-2 d-flex flex-column'>
           <div className='d-flex justify-content-between align-items-center'>
-            <img className='img-tokopedia' src="img/2.png" alt=""/>
+            <Link to='/'>
+              <img className='img-tokopedia' src="/img/2.png" alt=""/>
+            </Link>
             <span className='mx-2 text-kategori'>Kategori</span>
             <div className='wrap-search'>
               <input type="text" className='form-control' placeholder='Cari barang' data-bs-toggle="modal" data-bs-target="#exampleModal"/>

@@ -1,37 +1,69 @@
-import React, { Component } from 'react'
+import React, { Component} from 'react'
 import { connect } from 'react-redux'
 import '../assets/ProductDetail.css'
+import { addChart } from '../configs/redux/action/data'
 
 const mapStateToProps = state => {
   return {
     dataLocal: state.data.data
   }
 }
-
+const mapDispatchToProps = dispatch => {
+  return {
+    handleAddChart: (payload) => dispatch(addChart(payload))
+  }
+}
 class ProductDetail extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      color: '',
+      size: '',
+      selectedProductDescription: '' 
+    }
+  }
+  
+  handleAddChart(product) {
+    const selectedProductDescription = `${product.product_name} - ${this.state.color}, ${this.state.size}`
+    this.setState({selectedProductDescription})
+    this.props.handleAddChart({...product, selectedColor:this.state.color, selectedSize: this.state.size})
+  }
+  
+  handleSelectedColor(color) {
+    this.setState({color})
+  }
+
+  handleGoToChart() {
+    this.props.history.push('/cart')
+  }
+
+  handleSelectedSize(size) {
+    this.setState({size})
+  }
+
   render() {
-    const product = this.props.dataLocal[0]
+    const id = Number(this.props.match.params.id)
+    const product = this.props.dataLocal.find(product => product.id === id)
     const colors = product.colors
-    console.log(colors);
     return (
       <div className='product-detail wrapper'>
         <div className='path'>
           <ul className='d-flex align-items-center'>
             <li>
               <span>Home</span>
-              <img src="img/arrow-triangle.png" alt="" />
+              <img src="/img/arrow-triangle.png" alt="" />
             </li>
             <li>
               <span>Kategori</span>
-              <img src="img/arrow-triangle.png" alt="" />
+              <img src="/img/arrow-triangle.png" alt="" />
             </li>
             <li>
               <span>Sub-Kategori</span>
-              <img src="img/arrow-triangle.png" alt="" />
+              <img src="/img/arrow-triangle.png" alt="" />
             </li>
             <li>
               <span>Sub-Sub-Kategori</span>
-              <img src="img/arrow-triangle.png" alt="" />
+              <img src="/img/arrow-triangle.png" alt="" />
             </li>
             <li>
               <span style={{ color: '#7e7e7e' }}>Rompi</span>
@@ -57,7 +89,7 @@ class ProductDetail extends Component {
           <div className='product-detail-info'>
             <div>
               <div class="label-store">
-                <img src="img/label-store-icon.svg" alt="" />
+                <img src="/img/label-store-icon.svg" alt=""/>
                 <span>Official Store</span>
               </div>
               <h2 className='product-name'>{product.product_name}</h2>
@@ -65,7 +97,7 @@ class ProductDetail extends Component {
                 <div class="score">
                   <span>{product.star}</span>
                   <div class="stars">
-                    <img src="img/star.png" alt="" />
+                    <img src="/img/star.png" alt="" />
                   </div>
                   <span>({product.total_review})</span>
                 </div>
@@ -78,15 +110,15 @@ class ProductDetail extends Component {
               </div>
               <div class="product-guarantee">
                 <div class="ready">
-                  <img src="img/ready-icon.svg" alt="" />
+                  <img src="/img/ready-icon.svg" alt="" />
                   <span>Pasti Ready</span>
                 </div>
                 <div class="original">
-                  <img src="img/ori-icon.svg" alt="" />
+                  <img src="/img/ori-icon.svg" alt="" />
                   <span>Pasti Ori</span>
                 </div>
                 <div class="guarantee">
-                  <img src="img/guarantee-7-icon.svg" alt="" />
+                  <img src="/img/guarantee-7-icon.svg" alt="" />
                   <span>Garansi 7 hari</span>
                 </div>
               </div>
@@ -104,7 +136,7 @@ class ProductDetail extends Component {
                   <p style={{ color: 'orangered', fontSize: '30px', fontWeight:'bold'}}>Rp {product.price}</p>
                 </div>
                 <div class="price-guarantee">
-                  <img src="img/rp-icon.svg" alt="" />
+                  <img src="/img/rp-icon.svg" alt="" />
                   <span>Garansi harga termurah</span>
                 </div>
               </div>
@@ -132,8 +164,8 @@ class ProductDetail extends Component {
                 <div className='d-flex flex-row'>
                   {colors.map(color => (
                     <div>
-                      <input type="checkbox" className='btn-check' name='options' id={color} autoComplete='off' />
-                      <label className='btn btn-outline-success' for={color}>{color}</label>
+                      <input type="checkbox" className='btn-check' name='options' id={color} autoComplete='off' onClick={() => this.handleSelectedColor(color)} />
+                      <label className='btn btn-outline-secondary' for={color}>{color}</label>
                     </div>
                   ))}
                 </div>
@@ -150,19 +182,18 @@ class ProductDetail extends Component {
                 <div className='d-flex flex-row'>
                 {product.sizes.map(size => (
                   <div>
-                  <input type="checkbox" className='btn-check' name='options' id={size} autoComplete='off' />
+                  <input type="checkbox" className='btn-check' name='options' id={size} autoComplete='off' onClick={() => this.handleSelectedSize(size)}/>
                   <label className='btn btn-outline-secondary' for={size}>{size}</label>
                   </div>
                 ))}
                 </div>
               </div>
             </div>
-
           </div>
         </div>
 
         <div class="navbar-bottom-wrapper">
-          <button type='button' class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal">Tambah Ke Keranjang</button>
+          <button type='button' class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal" onClick={() => this.handleAddChart(product)}>Tambah Ke Keranjang</button>
         </div>
 
         {/* Modal */}
@@ -176,10 +207,10 @@ class ProductDetail extends Component {
               <div class="modal-body">
                 <div className='d-flex justify-content-between itemModal'>
                   <div>
-                  <img width='50px' className='rounded-3' src="img/12.jpg" alt=""/>
-                  <span className='ms-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                  <img width='50px' className='rounded-3' src={product.image} alt=""/>
+                  <span className='ms-3'>{this.state.selectedProductDescription}</span>
                   </div>
-                <button type="button" class="btn btn-success">Lihat Keranjang</button>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal"  onClick={() => this.handleGoToChart()} >Lihat Keranjang</button>
                 </div>
               </div>
             </div>
@@ -192,5 +223,6 @@ class ProductDetail extends Component {
 }
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(ProductDetail)
