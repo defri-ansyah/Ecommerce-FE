@@ -35,10 +35,10 @@ class Footer extends Component {
             <li>Kebijakan Privasi</li>
           </div>
           <div className='four d-flex flex-column align-items-center'>
-            <img width='500px' src="img/21.png" alt=""/>
+            <img width='500px' src="/img/21.png" alt=""/>
             <div className='d-flex mt-3'>
-              <img className='me-3' width='150px' src="img/22.png" alt=""/>
-              <img width='150px' src="img/23.png" alt=""/>
+              <img className='me-3' width='150px' src="/img/22.png" alt=""/>
+              <img width='150px' src="/img/23.png" alt=""/>
             </div>
             <span className='mt-3' style={{color: '#989898'}}>© 2009 - 2021, PT. Tokopedia.</span>
             <div className='d-flex align-items-center mt-3 p-1 rounded' style={{backgroundColor:'#f4f4f4'}}>
